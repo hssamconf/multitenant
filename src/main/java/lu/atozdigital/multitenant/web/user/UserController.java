@@ -1,4 +1,4 @@
-package lu.atozdigital.multitenant.web;
+package lu.atozdigital.multitenant.web.user;
 
 import lu.atozdigital.multitenant.dao.entities.User;
 import lu.atozdigital.multitenant.dao.repositories.UserRepository;
@@ -7,11 +7,11 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-public class MainController {
+public class UserController {
 
     private final UserRepository userRepository;
 
-    MainController(UserRepository userRepository) {
+    UserController(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
 
@@ -21,7 +21,7 @@ public class MainController {
     }
 
     @PostMapping("/users")
-    User newEmployee(@RequestBody User newUser) {
+    User newUser(@RequestBody User newUser) {
         return userRepository.save(newUser);
     }
 

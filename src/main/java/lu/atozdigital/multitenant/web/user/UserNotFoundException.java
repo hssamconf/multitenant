@@ -1,4 +1,4 @@
-package lu.atozdigital.multitenant.web;
+package lu.atozdigital.multitenant.web.user;
 
 public class UserNotFoundException extends RuntimeException {
     public UserNotFoundException(String errorMessage) {
